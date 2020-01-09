@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Kotlin Borderify",
+  "version": "1.0",
+  "description": "Adds a red border to kotlinlang.org",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://kotlinlang.org/*"
+      ],
+      "js": [
+        "build/distributions/crawl-extension-2.js"
+      ]
+    }
+  ]
+}
