@@ -21,16 +21,27 @@ dependencies {
 }
 
 tasks.register<Copy>("copyWeb") {
-    from(file("src/main/web"))
+    from(file("src/main/resources"))
     into("$buildDir/extension")
 }
 
+//tasks.register<Copy>("copyBundle") {
+//    from(files(
+//        "$buildDir/kotlin-js-min/main/crawl-extension-2.js",
+//        "$buildDir/kotlin-js-min/main/kotlin.js",
+//        "$buildDir/kotlin-js-min/main/kotlinx-coroutines-core.js"))
+//
+//    into("$buildDir/extension")
+//}
+
 tasks.register<Copy>("copyBundle") {
     from(files(
-        "$buildDir/kotlin-js-min/main/crawl-extension-2.js",
-        "$buildDir/kotlin-js-min/main/kotlin.js",
-        "$buildDir/kotlin-js-min/main/kotlinx-coroutines-core.js"))
-
+        "popup/build/kotlin-js-min/main/kotlin.js",
+//        "content/build/kotlin-js-min/main/kotlin.js",
+//        "content/build/kotlin-js-min/main/declarations.js",
+        "popup/build/kotlin-js-min/main/declarations.js",
+        "content/build/kotlin-js-min/main/content.js",
+        "popup/build/kotlin-js-min/main/popup.js"))
     into("$buildDir/extension")
 }
 

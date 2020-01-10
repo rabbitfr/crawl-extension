@@ -1,0 +1,24 @@
+13:39 < rabbit__1> non je veux pas
+13:39 < rabbit__1> content est quasi vide
+13:41 < rabbit__1> mais du coup je fous un build.gradle.kts dans content et popup ?
+13:41 < rabbit__1> ou j'en mets qu'un a la racine
+13:44 < eskatos> les deux approches fonctionnent
+13:44 < eskatos> mon conseil:
+13:44 < eskatos> refactor petit à petit
+13:45 < eskatos> 1 tu ajoute les deux sous projets dans ton settings.gradle.kts
+13:45 < rabbit__1> ouais ca m'envoie chier de partout <3
+13:45 < eskatos> 2/ ajoute content/build.gradke.kts et popup/build.gradle.kts
+13:46 < eskatos> 3/ duplique la build logic dans les deux nouveaux projets
+13:46 < eskatos> 4/ mets tes sources dans content/ et popup/, fais marcher les deux projets, vérifie que tu as bien les deux .js
+13:46 < rabbit__1> ouaip
+13:46 < eskatos> 5/ applique le plugin `base` dans ton root
+13:47 < eskatos> 3.bis/ supprime les versions dans plugins {} de content/ et popup/, vu que le root les déclare déjà (il te pete à la gueule sinon)
+13:48 < eskatos> 6/ supprime la build logic de ton root script
+13:48 < eskatos> 7/ ajoute à ton root script ta tâche qui va assembler ton extension
+13:48 < eskatos> là t'as un truc qui marche
+13:49 < eskatos> 9/ ensuite tu cleanup: bouge la build logic commune de content/ et popup/ vers le root
+13:49 < eskatos>     avec subprojects { ... }
+13:50 < eskatos>      et en ajoutant `apply false` dans `plugins { ... }` parce que par exemple le root project n'aura plus besoin du plugin kotlin
+13:50 < eskatos> ça peut se faire dans d'autre ordres, mais c'est l'idée
+13:50 < eskatos> ---
+

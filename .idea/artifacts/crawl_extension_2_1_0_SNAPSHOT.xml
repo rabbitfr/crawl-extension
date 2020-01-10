@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="crawl-extension-2-1.0-SNAPSHOT">
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
+    <root id="archive" name="crawl-extension-2-1.0-SNAPSHOT.jar">
+      <element id="module-output" name="com.rabbit.crawl-extension-2.main" />
+    </root>
+  </artifact>
+</component>

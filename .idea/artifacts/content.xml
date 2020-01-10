@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="content">
+    <output-path>$PROJECT_DIR$/content/build/libs</output-path>
+    <root id="archive" name="content.jar" />
+  </artifact>
+</component>
