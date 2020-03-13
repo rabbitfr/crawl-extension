@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Kotlin Borderify",
+  "name": "Crawl Music Extension",
   "version": "1.0",
-  "description": "Adds a red border to kotlinlang.org",
+  "description": "Adds music to crawl",
   "content_scripts": [
     {
       "matches": [

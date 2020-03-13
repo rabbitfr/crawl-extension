@@ -1,4 +1,6 @@
 import extensionTypes.InjectDetails
+import org.w3c.dom.Audio
+import org.w3c.dom.AudioTrack
 import webextensions.browser
 import kotlin.browser.document
 import kotlin.js.Promise
@@ -24,10 +26,9 @@ fun main() {
 
     println("<< popup 6 main")
 
-
     browser.runtime.onMessage.addListener { message,_,_ ->
 
-        println("onMesasge");
+        println("onMessage");
         if (message.command === "beastify") {
 //            insertBeast(message.beastURL as String)
             println("received message ")
@@ -36,6 +37,9 @@ fun main() {
         }
     }
 
+    val test = Audio("https://sounds.tabletopaudio.com/194_Tarrasque_Interior.mp3")
+
+    test.play()
 }
 
 

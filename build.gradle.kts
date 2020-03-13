@@ -41,7 +41,8 @@ tasks.register<Copy>("copyBundle") {
 //        "content/build/kotlin-js-min/main/declarations.js",
         "popup/build/kotlin-js-min/main/declarations.js",
         "content/build/kotlin-js-min/main/content.js",
-        "popup/build/kotlin-js-min/main/popup.js"))
+        "popup/build/kotlin-js-min/main/popup.js",
+        "background/build/kotlin-js-min/main/background.js"))
     into("$buildDir/extension")
 }
 

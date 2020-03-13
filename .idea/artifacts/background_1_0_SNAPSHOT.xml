@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="background-1.0-SNAPSHOT">
+    <output-path>$PROJECT_DIR$/background/build/libs</output-path>
+    <root id="archive" name="background-1.0-SNAPSHOT.jar" />
+  </artifact>
+</component>

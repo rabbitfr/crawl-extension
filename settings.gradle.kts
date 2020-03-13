@@ -1,2 +1,2 @@
 rootProject.name = "crawl-extension-2"
-include("popup", "content")
+include("popup", "content", "background")
